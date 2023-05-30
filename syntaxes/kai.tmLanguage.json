@@ -1,0 +1,59 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "kail",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#entities"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.kai",
+					"match": "\\b(if|while|for|return)\\b"
+				}
+			]
+		},
+		"entities": {
+			"patterns": [
+				{
+					"name": "storage.type.kai",
+					"match": "\\b(reload|import|sleep|var|validate_page|click|click_id|click_text|validate_text|validate_btn|input|get_to|range|end|push)\\b"
+				},
+				{
+					"name": "entity.name.type.kai",
+					"match": "\\b(existed|disabled|enabled|color)\\b"
+				},
+				{
+					"name": "comment.line.number-sign.kai",
+					"begin": "#",
+					"end": "\\n"
+				},
+				{
+					"name": "entity.name.function.kai",
+					"begin": "\\$",
+					"end": "(\\(|\\.|\\n| )"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.kai",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.kai",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.kail"
+}

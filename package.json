@@ -1,0 +1,26 @@
+{
+  "name": "kail",
+  "displayName": "kail",
+  "description": "kail",
+  "version": "0.0.3",
+  "engines": {
+    "vscode": "^1.78.0"
+  },
+  "publisher":"zhangkaicpchain",
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "kai",
+      "aliases": ["kail", "kai"],
+      "extensions": [".kail"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "kai",
+      "scopeName": "source.kail",
+      "path": "./syntaxes/kai.tmLanguage.json"
+    }]
+  }
+}

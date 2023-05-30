@@ -1,0 +1,15 @@
+validate_page Guide
+click "Create Account"
+validate_page CreateAccount
+validate_btn btn_confirm_id disabled
+validate_text name_error_id !existed
+input name_id "value"
+input password_id "password"
+input repeatPassword_id "password"
+validate_btn btn_confirm_id enabled
+input name_id "error"
+validate_text name_error_id existed,color:"#ffffff" "name error"
+validate_btn btn_confirm_id disabled
+input name_id "value"
+validate_btn btn_confirm_id enabled
+click btn_confirm_id
